@@ -16,5 +16,9 @@ const port = process.env.PORT || 5000
       })
      }catch(e){
         console.log(e)
+        app.listen(PORT,()=>{
+            console.log(`Server started on port ${PORT}`)
+        })
      }
+     start()
 }
