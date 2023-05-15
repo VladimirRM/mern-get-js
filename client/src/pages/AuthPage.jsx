@@ -16,14 +16,40 @@ const AuthPage = () => {
                                     name='email'
                                     className="validate"
                                 />
-                                </div>
-                                <label htmlFor="email">Email</label>
+                            </div>
+                            <label htmlFor="email">Email</label>
+                            <input
+                                type="password"
+                                name='password'
+                                className="validate"
+                            />
+                            <label htmlFor="password">Password</label>
+                        </div>
+                        <div className="row">
+                            <button className="waves-effect waves-light btn btn blue">Войти</button>
+                            <a href='/' className='btn-outline btn-reg'>Нет акаунта?</a>
+
+                        </div>
+
+                    </form>
+
+                       <h3>Авторизация</h3>
+                    <form className='form form-login'>
+                        <div className="row">
+                            <div className="input-field col s12">
                                 <input
-                                    type="password"
-                                    name='password'
+                                    type="email"
+                                    name='email'
                                     className="validate"
                                 />
-                                <label htmlFor="password">Password</label>
+                            </div>
+                            <label htmlFor="email">Email</label>
+                            <input
+                                type="password"
+                                name='password'
+                                className="validate"
+                            />
+                            <label htmlFor="password">Password</label>
                         </div>
                         <div className="row">
                             <button className="waves-effect waves-light btn btn blue">Войти</button>
