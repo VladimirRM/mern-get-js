@@ -8,24 +8,7 @@ function App() {
     <div className="app">
    <NavBar/>
       <AuthPage/>
-      <form className='form form-login'>
-        <div className="row">
-          <div className="input-field col s12">
-            <input 
-            type="email" 
-            name='email'
-            className="validate"
-            />
-            <label htmlFor="email">Email</label>
-            <input 
-            type="email" 
-            name='email'
-            className="validate"
-            />
-            <label htmlFor="email">Email</label>
-          </div>
-        </div>
-      </form>
+
     </div>
   );
 }
