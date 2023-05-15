@@ -14,11 +14,12 @@ const port = process.env.PORT || 5000
         useCreateIndex: true,
         useFindAndModify:true
       })
+      app.listen(PORT,()=>{
+        console.log(`Server started on port ${PORT}`)
+    })
      }catch(e){
         console.log(e)
-        app.listen(PORT,()=>{
-            console.log(`Server started on port ${PORT}`)
-        })
+   
      }
      start()
 }
