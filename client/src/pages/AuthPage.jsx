@@ -23,17 +23,17 @@ const AuthPage = () => {
                                 name='password'
                                 className="validate"
                             />
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Пароль</label>
                         </div>
                         <div className="row">
-                            <button className="waves-effect waves-light btn btn blue">Войти</button>
-                            <a href='/' className='btn-outline btn-reg'>Нет акаунта?</a>
+                            <button className="wawes-effect wawes-light  btn blue">Войти</button>
+                            <a href='/' className='btn-outline btn-reg'>         Нет акаунта?</a>
 
                         </div>
 
                     </form>
 
-                       <h3>Авторизация</h3>
+                    <h3>Регистрация</h3>
                     <form className='form form-login'>
                         <div className="row">
                             <div className="input-field col s12">
@@ -49,11 +49,11 @@ const AuthPage = () => {
                                 name='password'
                                 className="validate"
                             />
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Пароль</label>
                         </div>
                         <div className="row">
-                            <button className="waves-effect waves-light btn btn blue">Войти</button>
-                            <a href='/' className='btn-outline btn-reg'>Нет акаунта?</a>
+                            <button className="wawes-effect wawes-light  btn blue">Регистрация</button>
+                            <a href='/' className='btn-outline btn-reg'>       Уже есть акаунт?</a>
 
                         </div>
 
