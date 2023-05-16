@@ -1,5 +1,6 @@
 import React from 'react';
 import './AuthPage.scss'
+import { NavLink,Link } from 'react-router-dom';
 
 
 const AuthPage = () => {
@@ -7,6 +8,7 @@ const AuthPage = () => {
         <React.Fragment>
             <div className="container">
                 <div className="auth-page">
+                    <Link to="login">
                     <h3>Авторизация</h3>
                     <form className='form form-login'>
                         <div className="row">
@@ -32,7 +34,8 @@ const AuthPage = () => {
                         </div>
 
                     </form>
-
+                    </Link>
+                      <NavLink to="/registration">
                     <h3>Регистрация</h3>
                     <form className='form form-login'>
                         <div className="row">
@@ -58,6 +61,7 @@ const AuthPage = () => {
                         </div>
 
                     </form>
+                    </NavLink>
                 </div>
             </div>
         </React.Fragment>
