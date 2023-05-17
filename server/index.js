@@ -5,7 +5,7 @@ const app = express()
 
 const port = process.env.PORT || 5000 
 
-
+app.use('api/auth',require('./routes/auth.route.js'))
  async function start (){
      try{
       await mongoose.connect('mongodb+srv://user:user@cluster0.kpvcz4q.mongodb.net/?retryWrites=true&w=majority',{

@@ -18,7 +18,12 @@ const AuthPage = () => {
     }
      const registerHandler =  async() =>{
          try {
-           await axios.post() 
+           await axios.post('api/auth/registration',{...form},{
+             headers: {
+                "Content-Type": "application/json"
+             }
+             .than(response => console.log(response))
+           }) 
          } catch (error) {
             console.log(error) 
          }
@@ -83,7 +88,9 @@ const AuthPage = () => {
                             <label htmlFor="password">Пароль</label>
                         </div>
                         <div className="row">
-                            <button className="wawes-effect wawes-light  btn blue">Регистрация</button>
+                            <button className="wawes-effect wawes-light  btn blue"
+                            onClick={registerHandler}
+                            >Регистрация</button>
                             <Link to='/login' className='btn-outline btn-reg'>       Уже есть акаунт?</Link>
 
                         </div>
