@@ -2,7 +2,7 @@
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import AuthPage from './pages/AuthPage';
-import {Routes,Route} from "react-router-dom"
+// import {Routes,Route,NavLink} from "react-router-dom"
 // import registration from './pages/AuthPage'
 // import {Login } from './pages/AuthPage'
 
@@ -11,13 +11,12 @@ function App() {
   return (
     <div className="app">
 
-<Routes>
-<Route
-     <Route  path='NavBar' element={<NavBar/>}/>
-  <Route path="/login"  element={<AuthPage/>}/>
-  <Route path="/registration"  element={<AuthPage/>}/>
-</Routes>
-
+        {/* <Routes>
+          <Route path="/registration" element={ <NavLink to="/registration"></NavLink>}/>
+          <Route path="/login" element={ <NavLink to="/login"></NavLink>}/>
+        </Routes> */}
+<NavBar/>
+<AuthPage/>
       
 
     </div>

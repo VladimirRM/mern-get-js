@@ -1,14 +1,17 @@
 import React from 'react';
 import './AuthPage.scss'
-import { NavLink,Link } from 'react-router-dom';
+// import { NavLink,Link } from 'react-router-dom';
+import { Link,  NavLink} from 'react-router-dom';
 
 
 const AuthPage = () => {
     return (
-        <React.Fragment>
+           <React.Fragment>
+
             <div className="container">
                 <div className="auth-page">
-                    <Link to="login">
+
+                    <NavLink to="login">
                     <h3>Авторизация</h3>
                     <form className='form form-login'>
                         <div className="row">
@@ -32,9 +35,9 @@ const AuthPage = () => {
                             <a href='/' className='btn-outline btn-reg'>         Нет акаунта?</a>
 
                         </div>
-
-                    </form>
-                    </Link>
+                      </form>
+                    </NavLink>
+                    
                       <NavLink to="/registration">
                     <h3>Регистрация</h3>
                     <form className='form form-login'>
@@ -56,7 +59,7 @@ const AuthPage = () => {
                         </div>
                         <div className="row">
                             <button className="wawes-effect wawes-light  btn blue">Регистрация</button>
-                            <a href='/' className='btn-outline btn-reg'>       Уже есть акаунт?</a>
+                            <Link to='/' className='btn-outline btn-reg'>       Уже есть акаунт?</Link>
 
                         </div>
 
@@ -64,7 +67,9 @@ const AuthPage = () => {
                     </NavLink>
                 </div>
             </div>
-        </React.Fragment>
+
+            </React.Fragment>
+
     );
 };
 
