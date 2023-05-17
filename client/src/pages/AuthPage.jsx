@@ -1,10 +1,20 @@
 import React from 'react';
 import './AuthPage.scss'
 // import { NavLink,Link } from 'react-router-dom';
-import { Link,  NavLink} from 'react-router-dom';
+import { Link,  NavLink } from 'react-router-dom';
+import {useState} from 'react'
 
 
 const AuthPage = () => {
+
+    const [form,setForm] = useState({
+        email: '',
+        password: '',
+    })
+    const changeHandler = (event) =>{
+        setForm({...form,[event.target.name]: event.target.value})
+        console.log(form)
+    }
     return (
            <React.Fragment>
 
@@ -20,6 +30,7 @@ const AuthPage = () => {
                                     type="email"
                                     name='email'
                                     className="validate"
+                                    onChange={changeHandler}
                                 />
                             </div>
                             <label htmlFor="email">Email</label>
@@ -27,12 +38,14 @@ const AuthPage = () => {
                                 type="password"
                                 name='password'
                                 className="validate"
+                                onChange={changeHandler}
+
                             />
                             <label htmlFor="password">Пароль</label>
                         </div>
                         <div className="row">
                             <button className="wawes-effect wawes-light  btn blue">Войти</button>
-                            <a href='/' className='btn-outline btn-reg'>         Нет акаунта?</a>
+                            <Link to='/registration' className='btn-outline btn-reg'>         Нет акаунта?</Link>
 
                         </div>
                       </form>
@@ -47,6 +60,8 @@ const AuthPage = () => {
                                     type="email"
                                     name='email'
                                     className="validate"
+                                    onChange={changeHandler}
+
                                 />
                             </div>
                             <label htmlFor="email">Email</label>
@@ -54,12 +69,14 @@ const AuthPage = () => {
                                 type="password"
                                 name='password'
                                 className="validate"
+                                onChange={changeHandler}
+
                             />
                             <label htmlFor="password">Пароль</label>
                         </div>
                         <div className="row">
                             <button className="wawes-effect wawes-light  btn blue">Регистрация</button>
-                            <Link to='/' className='btn-outline btn-reg'>       Уже есть акаунт?</Link>
+                            <Link to='/login' className='btn-outline btn-reg'>       Уже есть акаунт?</Link>
 
                         </div>
 
