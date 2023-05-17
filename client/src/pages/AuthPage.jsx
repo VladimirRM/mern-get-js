@@ -3,6 +3,7 @@ import './AuthPage.scss'
 // import { NavLink,Link } from 'react-router-dom';
 import { Link,  NavLink } from 'react-router-dom';
 import {useState} from 'react'
+import axios from 'axios'
 
 
 const AuthPage = () => {
@@ -15,6 +16,13 @@ const AuthPage = () => {
         setForm({...form,[event.target.name]: event.target.value})
         console.log(form)
     }
+     const registerHandler =  async() =>{
+         try {
+           await axios.post() 
+         } catch (error) {
+            console.log(error) 
+         }
+     }
     return (
            <React.Fragment>
 
